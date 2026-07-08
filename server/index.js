@@ -12,6 +12,7 @@ const usersFile = path.join(dataDir, "users.json");
 const submissionsFile = path.join(dataDir, "submissions.json");
 const employeeIdsFile = path.join(dataDir, "employeeIds.json");
 const employeesFile = path.join(dataDir, "employees.json");
+const distPath = path.join(__dirname, "../dist");
 
 const app = express();
 const sessions = new Map();
@@ -466,7 +467,18 @@ app.delete("/api/admin/employee-ids/:employeeId", requireAuth, requireAdmin, (re
 
   res.json({ message: "Employee ID deleted successfully.", employeeIds });
 });
+if (existsSync(distPath)) {
+  app.use(express.static(distPath));
 
+  app.get("*", (req, res, next) => {
+    // Don't intercept API routes
+    if (req.path.startsWith("/api")) {
+      return next();
+    }
+
+    res.sendFile(path.join(distPath, "index.html"));
+  });
+}
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Backend server running on http://localhost:${port}`);
