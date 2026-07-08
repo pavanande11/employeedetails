@@ -479,6 +479,12 @@ if (existsSync(distPath)) {
     res.sendFile(path.join(distPath, "index.html"));
   });
 }
+app.get("/api/test", (req, res) => {
+  res.json({
+    message: "Express is running!",
+    method: req.method
+  });
+});
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Backend server running on http://localhost:${port}`);
