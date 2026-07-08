@@ -1,0 +1,28 @@
+[
+  {
+    "id": "a-1001",
+    "employeeId": "9999",
+    "name": "Backend User",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "id": "4e461aa4-1f93-4b16-9fb2-4e9b4aad1456",
+    "employeeId": "6283",
+    "name": "Pavan Kumar",
+    "email": "apavankumar@kluniversity.in",
+    "password": "pavan123",
+    "role": "user",
+    "createdAt": "2026-07-08T06:22:12.601Z"
+  },
+  {
+    "id": "0c521b22-65b7-464b-8edf-5a73516c9991",
+    "employeeId": "6620",
+    "name": "Gopi Arepalli",
+    "email": "gopi@gmail.com",
+    "password": "gopi123",
+    "role": "user",
+    "createdAt": "2026-07-08T06:45:51.456Z"
+  }
+]
