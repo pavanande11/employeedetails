@@ -170,7 +170,7 @@ export default function FacultyForm({ form, setForm, onSubmit, status }) {
           required
           value={form.ugStudyDetails || ""}
           onChange={(event) => update("ugStudyDetails", event.target.value)}
-          placeholder="Specify UG institution details"
+          placeholder="Specify UG University details(JNTUK/Andhra University/Other)"
           rows="3"
         />
       </label>
@@ -183,7 +183,7 @@ export default function FacultyForm({ form, setForm, onSubmit, status }) {
           required
           value={form.pgStudyDetails || ""}
           onChange={(event) => update("pgStudyDetails", event.target.value)}
-          placeholder="Specify PG institution details"
+          placeholder="Specify UG University details(JNTUK/Andhra University/Other)"
           rows="3"
         />
       </label>
@@ -196,7 +196,7 @@ export default function FacultyForm({ form, setForm, onSubmit, status }) {
           required
           value={form.phdStudyDetails || ""}
           onChange={(event) => update("phdStudyDetails", event.target.value)}
-          placeholder="Specify Ph.D institution details"
+          placeholder="Specify UG University details(JNTUK/Andhra University/Other)"
           rows="3"
         />
       </label>
